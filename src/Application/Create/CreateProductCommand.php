@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
-declare(strict_types=1);
 
 namespace Shop\Application\Create;
 
-class CreateProductCommand implements \Shop\Domain\ProductRepositoryInterface
+class CreateProductCommand
 {
     public function __construct(private string $name, private int $price, private \DateTime $createdAt)
     {
