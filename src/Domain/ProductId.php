@@ -5,7 +5,7 @@ use Ramsey\Uuid\Uuid;
 
 class ProductId
 {
-    public function __construct(private string $val)
+    public function __construct(private readonly string $val)
     {
         if (!Uuid::isValid($this->val)) {
             throw new \RuntimeException();

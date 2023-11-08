@@ -20,7 +20,9 @@ class EloquentProductRepository implements ProductRepositoryInterface
      */
     public function list(int $page, int $limit): array
     {
-        return ProductEloquent::query()->forPage($page, $limit)->get()
+        return ProductEloquent::query()->forPage($page, $limit)
+            ->orderByDesc('created_at')
+            ->get()
             ->map(fn(ProductEloquent $p) => $this->convertToDomain($p))->toArray();
     }
 

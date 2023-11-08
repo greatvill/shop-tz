@@ -21,7 +21,7 @@ class ProductService implements ProductServiceInterface
     public function create(CreateProductDto $dto): void
     {
         $p = new Product(
-            new ProductId(Str::uuid()),
+            new ProductId(Str::uuid()->toString()),
             new ProductName($dto->getName()),
             new Money($dto->getPrice()),
             $dto->getCreatedAt());
