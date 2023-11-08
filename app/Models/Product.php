@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Models\Product
  *
- * @property int $id
+ * @property string $id
  * @property string $name
  * @property int $price
  * @property \Illuminate\Support\Carbon|null $created_at
